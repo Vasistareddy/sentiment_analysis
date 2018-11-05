@@ -14,7 +14,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import svm
 from sklearn.metrics import classification_report
 
-data_dir = 'input/reviews_polarity'
+import pandas as pd
+
+trainData = pd.read_csv("https://raw.githubusercontent.com/Vasistareddy/sentiment_analysis/master/train.csv")
+testData = pd.read_csv("https://raw.githubusercontent.com/Vasistareddy/sentiment_analysis/master/test.csv")
 
 # Create feature vectors
 vectorizer = TfidfVectorizer(min_df=5,
@@ -22,13 +25,13 @@ vectorizer = TfidfVectorizer(min_df=5,
                              sublinear_tf=True,
                              use_idf=True)
 
-train_vectors = vectorizer.fit_transform(train_data)
-test_vectors = vectorizer.transform(test_data)
+train_vectors = vectorizer.fit_transform(trainData['Content'])
+test_vectors = vectorizer.transform(testData['Content'])
 
 # Perform classification with SVM, kernel=linear
 classifier_linear = svm.SVC(kernel='linear')
 t0 = time.time()
-classifier_linear.fit(train_vectors, train_labels)
+classifier_linear.fit(train_vectors, trainData['Label'])
 t1 = time.time()
 prediction_linear = classifier_linear.predict(test_vectors)
 t2 = time.time()
@@ -38,4 +41,4 @@ time_linear_predict = t2-t1
 # Print results in a nice table
 print("Results for SVC(kernel=linear)")
 print("Training time: %fs; Prediction time: %fs" % (time_linear_train, time_linear_predict))
-print(classification_report(test_labels, prediction_linear))
+print(classification_report(testData['Label'], prediction_linear))
