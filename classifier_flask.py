@@ -5,8 +5,8 @@ from flask import Flask, jsonify, make_response, request, redirect
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 
-vectorizer = pickle.load(open('vectorizer.sav', 'rb'))
-classifier = pickle.load(open('classifier.sav', 'rb'))
+vectorizer = pickle.load(open('models/vectorizer.sav', 'rb'))
+classifier = pickle.load(open('models/classifier.sav', 'rb'))
 
 @app.route('/sentiment', methods=['GET', 'POST'])
 def sentiment_analysis():
