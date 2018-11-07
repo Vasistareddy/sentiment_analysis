@@ -15,10 +15,10 @@ from sklearn.metrics import classification_report
 import pandas as pd
 
 # train Data
-trainData = pd.read_csv("https://raw.githubusercontent.com/Vasistareddy/sentiment_analysis/master/train.csv")
+trainData = pd.read_csv("https://raw.githubusercontent.com/Vasistareddy/sentiment_analysis/master/data/train.csv")
 
 # test Data
-testData = pd.read_csv("https://raw.githubusercontent.com/Vasistareddy/sentiment_analysis/master/test.csv")
+testData = pd.read_csv("https://raw.githubusercontent.com/Vasistareddy/sentiment_analysis/master/data/test.csv")
 
 # Create feature vectors
 vectorizer = TfidfVectorizer(min_df = 5,
