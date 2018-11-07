@@ -1,2 +1,3 @@
 # sentiment_analysis
-To find the sentiment of the data provided
+
+To find the sentiment of the Text data provided
