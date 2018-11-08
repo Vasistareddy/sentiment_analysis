@@ -4,7 +4,7 @@ To find the sentiment(**positive/negative**) of the text data provided. This cla
 
 # Install requirements
 
-pip install -r requirements.txt
+**pip install -r requirements.txt**
 
 # End_point
 
@@ -16,7 +16,7 @@ text
 
 # Url
 
-http://127.0.0.1:5000/sentiment?text=**"review_text"**
+http://127.0.0.1:5000/sentiment?text="review_text"
 
 # How to run
 
