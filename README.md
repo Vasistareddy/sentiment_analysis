@@ -1,12 +1,12 @@
-# sentiment_analysis
+# SVM_sentiment_analysis
 
-To find the sentiment of the Text data provided
+To find the sentiment(positive/negative) of the text data provided. This classifier model is implemented with SVM(kernel=linear)
 
 # Install requirements
 
 pip install -r requirements.txt
 
-# End-point
+# End_point
 
 sentiment
 
@@ -16,7 +16,7 @@ text
 
 # Url
 
-http://127.0.0.1:5000/sentiment?text=<text>
+http://127.0.0.1:5000/sentiment?text="review_text"
 
 # How to run
 
