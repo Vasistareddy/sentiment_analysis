@@ -1,6 +1,6 @@
 # SVM_sentiment_analysis
 
-To find the sentiment(positive/negative) of the text data provided. This classifier model is implemented with SVM(kernel=linear)
+To find the sentiment(**positive/negative**) of the text data provided. This classifier model is implemented with **_SVM(kernel=linear)_**
 
 # Install requirements
 
@@ -16,7 +16,7 @@ text
 
 # Url
 
-http://127.0.0.1:5000/sentiment?text="review_text"
+http://127.0.0.1:5000/sentiment?text=**"review_text"**
 
 # How to run
 
